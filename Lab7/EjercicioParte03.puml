@@ -1,0 +1,17 @@
+package Lab7;
+
+@startuml
+
+class Persona {
+    - String nombre
+    + Persona(String nombre)
+    + void saludar()
+}
+
+class Estudiante extends Persona {
+    + Estudiante(String nombre)
+    + void saludar()  // Sobrescritura
+    + void saludar(String nombreOtraPersona) // Sobrecarga
+}
+
+@enduml
