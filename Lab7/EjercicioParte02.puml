@@ -1,0 +1,29 @@
+package Lab7;
+
+@startuml
+
+abstract class Empleado {
+    - String nombre
+    - double salarioBase
+    + Empleado(String nombre, double salarioBase)
+    + abstract double calcularSalario()
+    + String getNombre()
+}
+
+class EmpleadoTiempoCompleto extends Empleado {
+    - int horasTrabajadas
+    - double tarifaPorHora
+    - double bonoExtra
+    + EmpleadoTiempoCompleto(String nombre, double salarioBase, int horasTrabajadas, double tarifaPorHora, double bonoExtra)
+    + double calcularSalario()
+}
+
+class EmpleadoPorComision extends Empleado {
+    - double ventasTotales
+    - double porcentajeComision
+    - double bonoMeta
+    + EmpleadoPorComision(String nombre, double salarioBase, double ventasTotales, double porcentajeComision, double bonoMeta)
+    + double calcularSalario()
+}
+
+@enduml
