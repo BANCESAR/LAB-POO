@@ -1,0 +1,17 @@
+package Lab7;
+
+@startuml
+abstract class Vehiculo {
+    - String marca
+    + Vehiculo(String marca)
+    + mostrarMarca() : void
+}
+
+class Coche {
+    - int numeroPuertas
+    + Coche(String marca, int numeroPuertas)
+    + mostrarInfo() : void
+}
+
+Vehiculo <|-- Coche
+@enduml
